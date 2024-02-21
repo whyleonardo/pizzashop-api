@@ -1,5 +1,5 @@
 export class NotAManagerError extends Error {
   constructor() {
-    super('User is not a restaurant manager.')
+    super('O usuário não é um gerenciador do restaurante')
   }
 }
