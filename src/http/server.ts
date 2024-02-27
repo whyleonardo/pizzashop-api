@@ -33,15 +33,7 @@ const app = new Elysia()
       credentials: true,
       allowedHeaders: ['content-type'],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
-      origin: (request): boolean => {
-        const origin = request.headers.get('origin')
-
-        if (!origin) {
-          return false
-        }
-
-        return true
-      },
+      origin: 'https://pizza-shop-gray.vercel.app',
     }),
   )
   .use(authentication)
