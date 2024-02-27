@@ -36,10 +36,6 @@ const app = new Elysia()
       origin: (request): boolean => {
         const origin = request.headers.get('origin')
 
-        if (!origin) {
-          return false
-        }
-
         return true
       },
     }),
